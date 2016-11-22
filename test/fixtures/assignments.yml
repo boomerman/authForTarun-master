@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subject: MyString
+  submitted_to: MyString
+  assignment_no: MyString
+  attachment: MyString
+
+two:
+  subject: MyString
+  submitted_to: MyString
+  assignment_no: MyString
+  attachment: MyString
