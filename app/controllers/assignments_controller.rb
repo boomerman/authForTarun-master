@@ -4,11 +4,13 @@ class AssignmentsController < ApplicationController
   before_action :students_only
   
   def index
-    @assignments = Assignment.all
+    # @assignments = Assignment.all
+    @assignments = Assignment.where(user_id: current_user)
   end
 
 
   def show
+
   end
 
   # GET /assignments/new

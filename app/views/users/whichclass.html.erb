@@ -1,0 +1,11 @@
+<h1> Which Class</h1>
+<div class="row faltu"></div>
+
+<div class="row">
+<% form_for (whichclass) do |f| %>
+<%= f.label :assignment_no %>
+<%= f.select :assignment_no,['1','2','3'] %>
+<%= f.submit %>
+<% end %>
+
+</div>
