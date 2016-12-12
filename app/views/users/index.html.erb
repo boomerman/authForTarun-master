@@ -1,35 +1,16 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Circulars</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Subject</th>
-      <th>Year</th>
-      <th>Branch</th>
-      <th>Group</th>
-      <th>Atach</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @circulars.each do |circular| %>
-      <tr> 
-        <td><%= circular.subject %></td>
-        <td><%= circular.year %></td>
-        <td><%= circular.branch %></td>
-        <td><%= circular.group %></td>
-        <td><%= link_to'download file', circular.atach.url %></td>
-        <td><%= link_to 'Show', circular %></td>
-        <td><%= link_to 'Edit', edit_circular_path(circular) %></td>
-        <td><%= link_to 'Destroy', circular, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Circular', new_circular_path %>
+<div class="container">
+  <div class="row">
+    <h3>Users</h3>
+    <div class="column">
+      <table class="table">
+        <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <%= render user %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
