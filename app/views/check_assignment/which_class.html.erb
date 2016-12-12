@@ -6,6 +6,10 @@
  <%= select_tag "branch", options_for_select(['Computer Science', 'Information Technology', 'Mechanical Engineering','Civil Engineering','Electronics and Communication','Electrical Engineering','Production Engineering','Applied Science']) %>
  <%= label_tag :group %>
  <%= select_tag "group", options_for_select(['A1','A2','B1','B2','E1','E2','E3']) %>
+  <%= label_tag :subject %>
+ <%= select_tag "subject", options_for_select(['DAA','CG', 'DBMS', 'WT','CNS']) %>
+ <%= label_tag :assignment_no %>
+ <%= select_tag "assignment_no", options_for_select(['1','2','3']) %>
  <%= submit_tag("submit") %>
 
 
