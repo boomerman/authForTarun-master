@@ -3,22 +3,9 @@
 
 <div class="row">
 <div class="small-12 large-8 columns">
-	<%= link_to   "Send New Circular to students", assignments_path, class: "button radius" %><br>
+	<%= link_to   "Send New Circular to students", circulars_path, class: "button radius" %><br>
 	<%= link_to   "Check Assignments", check_assignment_which_class_path, class: "button radius" %></div>
 <div class="small-12 large-4 columns"></div>
 </div>
 
- <tbody>
-    <% @assignments.each do |assignment| %>
-      <tr>
-        <td><%= assignment.subject %></td>
-        <td><%= assignment.submitted_to %></td>
-        <td><%= assignment.assignment_no %></td>
-        <td><%= link_to'download file', assignment.attachment.url %></td>
-        <td><%= link_to 'Show', assignment %></td>
-        <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
-        <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+ 

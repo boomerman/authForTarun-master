@@ -11,4 +11,5 @@ class User < ApplicationRecord
   devise :invitable, :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
          has_many :assignments  
+         has_many :circulars
 end

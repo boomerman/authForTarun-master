@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subject: MyString
+  year: MyString
+  branch: MyString
+  group: MyString
+  atach: MyString
+
+two:
+  subject: MyString
+  year: MyString
+  branch: MyString
+  group: MyString
+  atach: MyString

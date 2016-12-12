@@ -22,6 +22,7 @@ class UsersController < ApplicationController
   
 
   def students
+    @circulars = Circular.all
 
   end
 
