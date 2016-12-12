@@ -19,11 +19,7 @@ class UsersController < ApplicationController
   def teachers
     @assignments = Assignment.all
   end
-  def whichclass
-  @who = assignment_no
-
-
-  end
+  
 
   def students
 
