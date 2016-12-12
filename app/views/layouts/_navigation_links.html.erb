@@ -1,4 +1,12 @@
 <%# add navigation links to this file %>
 <li><%= link_to 'About', page_path('about') %></li>
+<% if user_signed_in? %>
+  <% if current_user.try(:teacher?) %>
   <li><%= link_to 'Teachers', teachers_path %></li>
+  <% end%>
+  <% end%>
+  <% if user_signed_in? %>
+  <% if current_user.try(:student?) %>
     <li><%= link_to 'Students', students_path %></li>
+    <% end %>
+    <% end %>

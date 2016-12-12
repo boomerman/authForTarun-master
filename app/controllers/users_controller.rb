@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
   before_action :admin_only, except: [:show, :teachers, :students]
-  before_action :teachers_only, only: [:teachers, :whichclass]
+  before_action :teachers_only, only: [:teachers]
 
   def index
     @users = User.all
