@@ -3,17 +3,30 @@
  <table width="100%">
   <thead>
     <tr>
+      <th>Student Name</th>
+      <th>Roll no.</th>
       <th>Subject</th>
-      <th>Submitted to</th>
-      <th>Assignment no</th>
-      <th>Attachment</th>
-      <th colspan="3"></th>
+      <th>Submitted To</th>
+      <th>Assignment No.</th>
+      <th>Attachment </th>
+      <th> Marks (out of 10)</th>
     </tr>
   </thead>
  <tbody>
     <% @results.each do |assignment| %>
       <tr>
    <td><%= assignment.user.name %> </td>
+   <td><%= assignment.user.roll_no %> </td>
+   <td><%= assignment.subject %> </td>
+   <td><%= assignment.submitted_to %> </td>
+   <td><%= assignment.assignment_no %> </td>
+   <td><%= link_to "download", assignment.attachment.url %> </td>
+  <!-- <td><%= form_tag(url: students_path, remote: true) do %>
+        <%= text_field_tag :marks %></td>
+        <td> <%= submit_tag %>  <% end %></td>
+  --!>      
+ 
+
       </tr>
     <% end %>
   </tbody>

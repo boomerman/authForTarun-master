@@ -1,45 +1,24 @@
-<h1> Student Portal</h1>
+
 <div class="row faltu"></div>
 
 <div class="row">
-<div class="small-12 large-8 columns">
+<div class="small-12 large-7 columns "><h1> Student Portal</h1>
 	<%= link_to   "Submit Assignment", assignments_path, class: "button radius" %><br>
 	<%= link_to   "Submit Mc Certies", teachers_path, class: "button radius" %></div>
-<div class="small-12 large-4 columns"></div>
+<div class="small-12 large-5 columns bar"><h1>Notice</h1>
+
+
+    <% @circulars.each do |circular| %>
+     <ul>
+     <li class= "list"><%= circular.subject %><br><span class="link"><%= link_to "Download", circular.atach.url %></span>
+     </li>
+     </ul>
+  
+<% end %></div>
 </div>
 <p id="notice"><%= notice %></p>
 
-<h1>Circulars</h1>
 
-<table width="100%">
-  <thead>
-    <tr>
-      <th>Subject</th>
-      <th>Year</th>
-      <th>Branch</th>
-      <th>Group</th>
-      <th>Atach</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @circulars.each do |circular| %>
-      <tr> 
-        <td><%= circular.subject %></td>
-        <td><%= circular.year %></td>
-        <td><%= circular.branch %></td>
-        <td><%= circular.group %></td>
-        <td><%= link_to'download file', circular.atach.url %></td>
-        <td><%= link_to 'Show', circular %></td>
-        <td><%= link_to 'Edit', edit_circular_path(circular) %></td>
-        <td><%= link_to 'Destroy', circular, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'New Circular', new_circular_path %>
 

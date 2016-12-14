@@ -12,31 +12,28 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :subject %>
+    <%= f.label :title %>
     <%= f.text_field :subject %>
   </div>
 
   <div class="field">
     <%= f.label :year %>
-    <%= f.text_field :year %>
+    <%= f.select :year, ['first year','secont year','third year','final year']  %>
   </div>
 
   <div class="field">
     <%= f.label :branch %>
-    <%= f.text_field :branch %>
+    <%= f.select :branch ,  ['Computer Science', 'Information Technology', 'Mechanical Engineering','Civil Engineering','Electronics and Communication','Electrical Engineering','Production Engineering','Applied Science'] %>
   </div>
 
-  <div class="field">
-    <%= f.label :group %>
-    <%= f.text_field :group %>
-  </div>
+  
 
   <div class="field">
     <%= f.label :attach %>
     <%= f.file_field :atach %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <div class="actions ">
+    <%= f.submit 'submit', :class => 'button radius' %>
+  </div> 
 <% end %>
