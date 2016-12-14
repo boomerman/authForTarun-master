@@ -18,12 +18,18 @@ before_action :authenticate_user!
 		#subject: "@subject", assignment_no: "@assignment_no"})
 
   	 #@results = User.includes(:assignments).where("assignments.assignment_no = @number").references(:assignments)
-  	@results = User.select('assignments.subject, assignments.submitted_to, assignments.assignment_no')
-          .joins(' INNER JOIN assignments ON assignments.roll_no = users.roll_no')
-          .where('assignments.assignment_no = @number')	
-         # puts "#{@results.roll_no}"
+  	#@results = User.select('assignments.subject, assignments.submitted_to, assignments.assignment_no')
+          #.joins(' INNER JOIN assignments ON assignments.roll_no = users.roll_no')
+          #.where('assignments.assignment_no = @number')	
+          # puts "#{@results.roll_no}"
+         # @results = Assignment.joins(:user).where(year: params[:year])
+            @results = Assignment.joins(:user)
+            .where(:users =>{:year => @year, :branch => @branch, :group => @group},
+             :assignments =>{:subject => @subject, :assignment_no => @number})
 
-#@results = Assignment.all
+
+
+
 
   end
 
