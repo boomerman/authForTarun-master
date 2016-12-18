@@ -9,7 +9,7 @@
       <th>Submitted To</th>
       <th>Assignment No.</th>
       <th>Attachment </th>
-      <th> Marks (out of 10)</th>
+     
     </tr>
   </thead>
  <tbody>
@@ -21,13 +21,8 @@
    <td><%= assignment.submitted_to %> </td>
    <td><%= assignment.assignment_no %> </td>
    <td><%= link_to "download", assignment.attachment.url %> </td>
-  <!-- <td><%= form_tag(url: students_path, remote: true) do %>
-        <%= text_field_tag :marks %></td>
-        <td> <%= submit_tag %>  <% end %></td>
-  --!>      
- 
-
-      </tr>
+</tr>
+      
     <% end %>
   </tbody>
 

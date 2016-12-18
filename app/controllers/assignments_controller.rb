@@ -70,7 +70,7 @@ class AssignmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def assignment_params
-      params.require(:assignment).permit(:subject, :submitted_to,:roll_no, :assignment_no, :attachment)
+      params.require(:assignment).permit(:subject, :submitted_to, :assignment_no, :attachment, :marks)
     end
     def students_only
     unless current_user.student? || current_user.admin?

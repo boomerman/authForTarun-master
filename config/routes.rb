@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   resources :circulars
   get 'check_assignment/which_class'
   post 'check_assignment/assignment_show'
+  post 'check_assignment/update_marks'
+
   resources :assignments
   namespace :admin do
     resources :users

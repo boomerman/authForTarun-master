@@ -28,10 +28,8 @@ before_action :authenticate_user!
              :assignments =>{:subject => @subject, :assignment_no => @number})
 
 
-
-
-
-  end
+ end
+ 
 
    private
     def teachers_only
